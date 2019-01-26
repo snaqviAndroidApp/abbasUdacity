@@ -1,0 +1,5 @@
+<resources>
+    <string-array name="no_image_messag">
+    <item>No!</item>
+    </string-array>
+</resources>

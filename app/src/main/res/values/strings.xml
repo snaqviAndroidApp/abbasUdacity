@@ -4,7 +4,7 @@
     <!-- Detail Activity-->
     <string name="detail_also_known_as_label">Also known as:</string>
     <string name="detail_place_of_origin_label">Place of origin:</string>
-    <string name="detail_description_label">Description:</string>
+    <string name="detail_description_label"> Description here:</string>
     <string name="detail_ingredients_label">Ingredients:</string>
 
     <!-- Content descriptions-->
@@ -12,6 +12,9 @@
 
     <!-- Error messages-->
     <string name="detail_error_message">Sandwich data not available</string>
+    <string name="alsoKnownIsEmpty">No alternate names available</string>
+    <string name="IngredientsEmpty">Sorry, No Ingredients information available</string>
+    <string name="no_image">No Image available!</string>
 
     <string-array name="sandwich_names">
         <item>Ham and cheese sandwich</item>
