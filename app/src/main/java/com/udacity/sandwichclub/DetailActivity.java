@@ -3,6 +3,7 @@ package com.udacity.sandwichclub;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -10,6 +11,8 @@ import android.widget.Toast;
 import com.squareup.picasso.Picasso;
 import com.udacity.sandwichclub.model.Sandwich;
 import com.udacity.sandwichclub.utils.JsonUtils;
+
+import java.util.ArrayList;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -83,25 +86,13 @@ public class DetailActivity extends AppCompatActivity {
                     .load(sandwichIn.getImage())
                     .error(R.drawable.ic_broken_image_black_24dp)
                     .into(ingredientsIv);
-            if (sandwichIn.getAlsoKnownAs().size() != 0 && !sandwichIn.getAlsoKnownAs().equals(0)) {      // alsoKnownAs
-                for (String strT : sandwichIn.getAlsoKnownAs()) {
-                    if (strT.isEmpty()) {
-                        tvAlsoKnownAs.setText(strT);
-                    } else {
-                        tvAlsoKnownAs.append("\n" + strT);
-                    }
-                }
+            if (sandwichIn.getAlsoKnownAs().size() != 0 && !sandwichIn.getAlsoKnownAs().equals(0)) {        // alsoKnownAs
+                tvAlsoKnownAs.setText(TextUtils.join("\n",sandwichIn.getAlsoKnownAs()));
             } else {
                 tvAlsoKnownAs.setText(R.string.alsoKnownIsEmpty);
             }
-            if (sandwichIn.getIngredients().size() != 0 && !sandwichIn.getIngredients().equals(0)) {      // Ingredients
-                for (String strTIng : sandwichIn.getIngredients()) {
-                    if (strTIng.isEmpty()) {
-                        tvIngredients.setText(strTIng);
-                    } else {
-                        tvIngredients.append("\n" + strTIng);
-                    }
-                }
+            if (sandwichIn.getIngredients().size() != 0 && !sandwichIn.getIngredients().equals(0)) {        // Ingredients
+                tvIngredients.setText(TextUtils.join("\n",sandwichIn.getIngredients()));
             } else {
                 tvIngredients.setText(R.string.IngredientsEmpty);
             }
