@@ -1,11 +1,6 @@
 <vector android:height="24dp" android:tint="#A7AAB0"
     android:viewportHeight="24.0" android:viewportWidth="24.0"
     android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android" >
-    <resource>
-        <string name="detail_also_known_as_label">Also known as:</string>
-    </resource>
-
-
 
     <path android:fillColor="#FF000000"
         android:fillType="nonZero"
